@@ -22,13 +22,6 @@ def insertionHeap (lista, valor):
         i = p
         p = indicePai (i)
 
-def makeHeap (lista):
-    listaHeap = []
-    for i in range (len(lista)):
-        insertionHeap (listaHeap, lista[i])
-    
-    return listaHeap
-
 def HeapifyOrder (lista, tam, indice):
     maior = indice #indice pai - esperasse que seja maior que seus filhos
     esquerda = 2*indice +1 #indice do filho a esquerda
@@ -54,7 +47,7 @@ def Heapify (lista, tam):
         
 def removeHeap (lista):
     if len(lista) == 0:
-        return lista
+        return
     
     removido = lista[0]
     lista[0] = lista[len(lista) -1]
